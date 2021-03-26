@@ -1,0 +1,33 @@
+//========Fonts==============================
+//default prime====================================
+$fontFamilyPrime: Roboto, Arial, sans-serif;
+$fontSizePrime: 15px;
+$lineHeightPrime: 1.1;
+$fontWeightPrime: 400;
+$fontColorPrime: #000;
+//more fonts family===================================
+$ffSectionTitle: "PFD";
+$ffDecorationTitle: "Ceremon";
+$ffNumber: "Bravo";
+// font size==========================================
+$fzDecorationTitle: "Ceremon";
+$fzSectionTitle: 35px;
+$fzSubtitle: 21px;
+$fzMenu: 14px;
+// color=============================================
+$generalColor: #1c242a;
+$mainColor: #bb9c66;
+
+//----------------------------------------------------
+
+// =======Max/Min width & Breackpoints================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1170;
+$md0: $maxWidthContainer + 30;
+$md1: 1067.98;
+$md2: 967.98;
+$md3: 767.98;
+$md4: 659.98;
+$md5: 479.98;
+//-----------------------------------------------------
