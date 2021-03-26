@@ -50,7 +50,6 @@ function dynamic_adaptive_back(el) {
       if (parent_place.children().eq(index_place - 1).length) {
          el.insertAfter(parent_place.children().eq(index_place - 1));
       } else {
-         console.log('2');
          el.appendTo(parent_place);
       }
    } else {
