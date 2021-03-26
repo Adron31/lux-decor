@@ -89,38 +89,45 @@ $('.catalog-menu__head').click(function () {
    }
 });
 
-if (isMobile.any()) {
-   $('.catalog-menu__item').click(function (e) {
-      $(this).siblings().has('._active').children().removeClass('_active');
-      $(this).children().addClass('_active');
-      $(this).closest('.catalog-menu__wrap').addClass('_slide-left');
-   });
+$(window).resize(function () {
+   catalogWork()
+});
 
+catalogWork();
 
-   $('.catalog-submenu__back').click(function (e) {
-      e.stopPropagation();
-      let elem = $(this);
+function catalogWork() {
+   if (isMobile.any()) {
+      $('.catalog-menu__item').click(function (e) {
+         $(this).siblings().has('._active').children().removeClass('_active');
+         $(this).children().addClass('_active');
+         $(this).closest('.catalog-menu__wrap').addClass('_slide-left');
+      });
 
-      setTimeout(function () {
-         elem.closest('._active').removeClass('_active');
-      }, 300);
-      elem.closest('._slide-left').removeClass('_slide-left');
-   });
+      $('.catalog-submenu__back').click(function (e) {
+         e.stopPropagation();
+         let elem = $(this);
 
-   $('body').click(function (e) {
-      let el = $('.catalog-menu').find('*');
+         setTimeout(function () {
+            elem.closest('._active').removeClass('_active');
+         }, 300);
+         elem.closest('._slide-left').removeClass('_slide-left');
+      });
 
-      if (!el.is(e.target) && $('.catalog-menu__head').hasClass('_active')) {
-         collapsCatalog();
-      }
-   });
-} else {
-   $('.catalog-menu__item').mouseenter(function () {
-      $(this).children().addClass('_active');
-   });
-   $('.catalog-menu__item').mouseleave(function () {
-      $(this).children().removeClass('_active');
-   });
+      $('body').click(function (e) {
+         let el = $('.catalog-menu').find('*');
+
+         if (!el.is(e.target) && $('.catalog-menu__head').hasClass('_active')) {
+            collapsCatalog();
+         }
+      });
+   } else {
+      $('.catalog-menu__item').mouseenter(function () {
+         $(this).children().addClass('_active');
+      });
+      $('.catalog-menu__item').mouseleave(function () {
+         $(this).children().removeClass('_active');
+      });
+   }
 }
 
 function collapsCatalog() {
