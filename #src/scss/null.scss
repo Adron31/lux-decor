@@ -46,6 +46,9 @@ textarea {
 	font-weight: inherit;
 	line-height: inherit;
 	background: none;
+	&:focus {
+		outline: none;
+	}
 }
 input::-ms-clear {
 	display: none;

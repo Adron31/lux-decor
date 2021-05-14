@@ -1,4 +1,81 @@
+//main slider
+$('.main-slider').slick({
+	dots: true,
+	infinite: true,
+	speed: 800,
+	slidesToShow: 1,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	responsive: [
+		{
+			breakpoint: 968,
+			settings: {
+				arrows: false,
+			}
+		},
+	]
+});
+
+//product slider
+$('.slider-products').slick({
+	// dots: true,
+	infinite: true,
+	speed: 800,
+	slidesToShow: 4,
+	slidesToScroll: 4,
+	adaptiveHeight: false,
+	// autoplay: true,
+	// autoplaySpeed: 5000,
+
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				arrows: false,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			}
+		},
+		{
+			breakpoint: 560,
+			settings: {
+				arrows: false,
+				centerMode: false,
+				centerPadding: '0px',
+				slidesToShow: 2,
+				slidesToScroll: 2,
+			}
+		}
+	]
+});
+
+//slider-useful
+$('.slider-useful').slick({
+	dots: true,
+	arrows: false,
+	infinite: true,
+	speed: 800,
+	slidesToShow: 2,
+	slidesToScroll: 2,
+	// autoplay: true,
+	autoplaySpeed: 5000,
+	responsive: [
+		{
+			breakpoint: 660,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			}
+		},
+	]
+});
+
+
+
+
+
 //BildSlider
+/*
 let sliders = document.querySelectorAll('._swiper');
 if (sliders) {
 	for (let index = 0; index < sliders.length; index++) {
@@ -62,13 +139,13 @@ if (sliderScrollItems.length > 0) {
 function sliders_bild_callback(params) { }
 
 let slider_about = new Swiper('.about__slider', {
-	/*
+
 	effect: 'fade',
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: false,
 	},
-	*/
+
 	observer: true,
 	observeParents: true,
 	slidesPerView: 1,
@@ -90,7 +167,7 @@ let slider_about = new Swiper('.about__slider', {
 		nextEl: '.about__more .more__item_next',
 		prevEl: '.about__more .more__item_prev',
 	},
-	/*
+
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -110,7 +187,7 @@ let slider_about = new Swiper('.about__slider', {
 			spaceBetween: 30,
 		},
 	},
-	*/
+
 	on: {
 		lazyImageReady: function () {
 			ibg();
@@ -164,3 +241,4 @@ if (priceSlider) {
 	});
 
 }
+*/

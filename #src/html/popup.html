@@ -1,22 +1,79 @@
-<div class="popup popup_popup">
-   <div class="popup__content">
-      <div class="popup__body">
-         <div class="popup__close"></div>
+<div id="popup-login" class="popup popup_login">
+   <div class="popup__body">
+      <div class="popup__content">
+         <h2 class="popup__title">Вход</h2>
+         <button class="popup__close js-popup-close"><span class='_visualy-hidden'>Закрыть окно</span></button>
+         <form action="#" method="POST" class="popup__form form-popup form" autocomplete="off">
+            <div class="form-popup__item form-popup__item_email form__item">
+               <label for="login-email" class='form__label _visualy-hidden'>Введите ваш Email</label>
+               <input id="login-email" name="userEmail" type="text" class="form__input js-email js-req" placeholder="Email">
+            </div>
+            <div class="form-popup__item form-popup__item_pass form__item">
+               <label for="login-pass" class='form__label _visualy-hidden'>Введите ваш пароль</label>
+               <input id="login-pass" name="userPassword" type="password" class="form__input js-pass js-req" placeholder="Пароль">
+               <button type="button" class="form__toggle-pass"></button>
+            </div>
+            <a href="#" class="form-popup__forgot">Забыли пароль?</a>
+            <button type="submit" class="form-popup__submit form__submit btn btn_login">Вход</button>
+         </form>
+         <div class="popup__text">У меня еще нет аккаунта. <a href="#popup-sign-up" class="popup__link js-popup-link">Регистранция.</a></div>
       </div>
    </div>
 </div>
-<div class="popup popup_massagename-message">
-   <div class="popup__content">
-      <div class="popup__body">
-         <div class="popup__close"></div>
+
+<div id="popup-sign-up" class="popup popup_sign-up">
+   <div class="popup__body">
+      <div class="popup__content">
+         <h2 class="popup__title">Регистрация</h2>
+         <button class="popup__close js-popup-close"><span class='_visualy-hidden'>Закрыть окно</span></button>
+         <form action="#" method="POST" data-ajax="true" name="" class="popup__form form-popup form" autocomplete="off">
+            <div class="form-popup__item form-popup__item_name form__item">
+               <label for="user-name" class='form__label _visualy-hidden'>Введите ваше имя</label>
+               <input id="user-name" name="userName" type="text" class="form__input" placeholder="Имя">
+            </div>
+            <div class="form-popup__item form-popup__item_name form__item">
+               <label for="user-surname" class='form__label _visualy-hidden'>Введите вашу фамилию</label>
+               <input id="user-surname" name="userSurname" type="text" class="form__input" placeholder="Фамилия">
+            </div>
+            <div class="form-popup__item form-popup__item_tel form__item">
+               <label for="user-tel" class='form__label _visualy-hidden'>Введите ваш Телефон</label>
+               <input id="user-tel" name="userPhone" type="text" class="form__input js-tel" placeholder="Телефон">
+            </div>
+            <div class="form-popup__item form-popup__item_email form__item">
+               <label for="user-email" class='form__label _visualy-hidden'>Введите ваш Email</label>
+               <input id="user-email" name="userEmail" type="text" class="form__input js-email js-req" placeholder="Email">
+            </div>
+            <div class="form-popup__item form-popup__item_pass form__item">
+               <label for="user-pass" class='form__label _visualy-hidden'>Введите ваш пароль</label>
+               <input id="user-pass" name="userPassword1" type="password" class="form__input js-pass js-req" placeholder="Пароль">
+               <button type="button" class="form__toggle-pass"></button>
+            </div>
+            <div class="form-popup__item form-popup__item_pass form-popup__item_last form__item">
+               <label for="user-pass-repeat" class='form__label _visualy-hidden'>Повторите ваш пароль</label>
+               <input id="user-pass-repeat" name="userPassword2" type="password" class="form__input js-pass-repeat js-req" placeholder="Повторить пароль">
+               <button type="button" class="form__toggle-pass"></button>
+            </div>
+            <button type="submit" class="form-popup__submit form__submit btn btn_login">Регистрация</button>
+         </form>
+         <div class="popup__text">Или <a href="#popup-login" class="popup__link js-popup-link">войдите, </a>если у вас уже есть аккаунт</div>
       </div>
    </div>
 </div>
-<div class="popup popup_video">
-   <div class="popup__content">
-      <div class="popup__body">
-         <div class="popup__close popup__close_video"></div>
-         <div class="popup__video _video"></div>
+
+<div id="popup-order" class="popup popup_order">
+   <div class="popup__body">
+      <div class="popup__content popup__content_order">
+         <h2 class="popup__title popup__title_order">Ваш заказ успешно добавлен</h2>
+         <button class="popup__close popup__close_order js-popup-close"><span class='_visualy-hidden'>Закрыть окно</span></button>
+         <a href="#" class="popup__button btn btn_order">Оформить заказ</a>
+         <button class="popup__button js-popup-close btn">Продолжить покупку</button>
+      </div>
+   </div>
+</div>
+
+<div id="popup-message" class="popup popup_message">
+   <div class="popup__body">
+      <div class="popup__content popup__content_message">
       </div>
    </div>
 </div>

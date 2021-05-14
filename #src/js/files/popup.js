@@ -1,103 +1,74 @@
-const popupLinks = document.querySelectorAll(".popup-link");
-const body = document.querySelector("body");
-const lockPadding = document.querySelectorAll(".lock-padding");
+$('.js-popup-link').click(function (evt) {
+   const popupId = $(this).attr('href');
+   evt.preventDefault();
+   popupClose();
+   popupOpen($(popupId));
+   bodyScrollLock();
+});
 
-let unlock = true;
-const timeout = 800;
+$('.js-popup-close').click(function (evt) {
+   popupClose();
+   bodyScrollUnlock();
+});
 
-if (popupLinks.length > 0) {
-   for (let index = 0; index < popupLinks.length; index++) {
-      const popupLink = popupLinks[index];
+$('.product-card__button').click(function (evt) {
+   evt.preventDefault();
+   popupClose();
+   popupOpen($('#popup-order'));
+   bodyScrollLock();
+});
 
-      popupLink.addEventListener('click', function (event) {
-         const popupName = popupLink.getAttribute("href").replace('#', '');
-         console.log(popupName);
-         const curentPopup = document.getElementById(popupName);
-         popupOpen(curentPopup);
-         event.preventDefault();
-      });
+let popupClickHandler = function (evt) {
+   //закрывает попап при клике вне окна
+   if (evt.target === $(this).find('.popup__body')[0]) {
+      popupClose();
+      bodyScrollUnlock();
    }
+};
+
+let windowKeydownHandler = function (evt) {
+   const ESC_CODE = 27;
+   if (evt.keyCode === ESC_CODE) {
+      evt.preventDefault;
+      popupClose();
+      bodyScrollUnlock();
+   }
+};
+
+function popupOpen(popup) {
+   popup.addClass('_open');
+   popup.on('click', popupClickHandler);
+   $(window).on('keydown', windowKeydownHandler);
 }
 
-const popupCloseIcons = document.querySelectorAll(".close-popup");
-
-if (popupCloseIcons.length > 0) {
-   for (let index = 0; index < popupCloseIcons.length; index++) {
-      const el = popupCloseIcons[index];
-      el.addEventListener('click', function (event) {
-         popupClose(el.closest('.popup'));
-         event.preventDefault;
-      });
-   }
-}
-
-function popupOpen(curentPopup) {
-   if (curentPopup && unlock) {
-      const popupActive = document.querySelector('.popup.open');
-
-      if (popupActive) {
-         popupClose(popupActive, false);
-      } else {
-         bodyLock();
+function popupClose() {
+   if ($('.popup').hasClass('_open')) {
+      const popupForm = $('.popup._open').find('.form');
+      if (popupForm[0]) {
+         formClear(popupForm);
       }
-      curentPopup.classList.add('open');
-
-      curentPopup.addEventListener('click', function (event) {
-         if (!event.target.closest('.popup__content') || event.target.closest('.popup__close')) {
-            popupClose(event.target.closest('.popup'));
-         }
-      });
-
-      window.addEventListener('keydown', function (event) {
-         if (event.keyCode === 27) {
-            event.preventDefault;
-            popupClose(curentPopup);
-         }
-      });
+      $('.popup._open').off('click', popupClickHandler);
+      $('.popup._open').removeClass('_open');
+      $(window).off('keydown', windowKeydownHandler);
    }
 }
 
-function popupClose(popupActive, doUnlock = true) {
-   if (unlock) {
-      popupActive.classList.remove('open');
-      if (doUnlock) {
-         bodyUnlock();
-      }
+function bodyScrollLock() {
+   const paddingValue = $(window).outerWidth() - $('body').innerWidth();
+   if ($('body').css('paddingRight') === '0px') {
+      $('body').addClass('_lock').css('paddingRight', paddingValue + 'px');
    }
 }
 
-function bodyLock() {
-   const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-
-   if (lockPadding.length > 0) {
-      for (let index = 0; index < lockPadding.length; index++) {
-         const el = lockPadding[index];
-         el.style.paddingRight = lockPaddingValue;
-      }
-   }
-   body.style.paddingRight = lockPaddingValue;
-   body.classList.add('lock');
-
-   unlock = false;
+function bodyScrollUnlock() {
+   const timeout = 300;
    setTimeout(function () {
-      unlock = true;
+      $('body').removeClass('_lock').css('paddingRight', '0px');
    }, timeout);
 }
 
-function bodyUnlock() {
-   setTimeout(function () {
-      if (lockPadding.length > 0) {
-         for (let index = 0; index < lockPadding.length; index++) {
-            const el = lockPadding[index];
-            el.style.paddingRight = '0px';
-         }
-      }
-      body.style.paddingRight = '0px';
-      body.classList.remove('lock');
-   }, timeout);
-
-   unlock = false;
-   setTimeout(function () {
-      unlock = true;
-   }, timeout);
+function popupMessageOpen(message) {
+   $('.popup__content_message').html(message);
+   popupOpen($('#popup-message'));
+   setTimeout(popupClose, 2500);
 }

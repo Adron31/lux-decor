@@ -2,31 +2,34 @@
 let menuOpened = {
    catalog: false,
    main: false,
-   toggleCatalog() {
-      this.catalog = !this.catalog;
+   toggle: function (key) {
+      this[key] = !this[key];
    },
-   toggleMain() {
-      this.main = !this.main;
-   },
-   or() {
+   or: function () {
       return this.catalog || this.main;
    },
-   and() {
+   and: function () {
       return this.catalog && this.main;
    },
 };
+let breakpoint_md4 = 660;
 
 resetCatalogMenu();
 
 $('.catalog-menu__head').click(function () {
    $(this).toggleClass('_active');
    if (isMobile.any()) {
-      $('.catalog-menu__body').toggleClass('_active');
+      if ($(window).outerWidth() < breakpoint_md4) {
+         $('.catalog-menu__body').slideDown(0);
+         $('.catalog-menu__body').toggleClass('_active');
+      } else {
+         $('.catalog-menu__body').slideToggle(300);
+      }
       resetCatalogMenu();
-      menuOpened.toggleCatalog();
+      menuOpened.toggle('catalog');
       scrollLock();
    } else {
-      $('.catalog-menu__body').slideToggle(300)
+      $('.catalog-menu__body').slideToggle(300);
    }
 });
 
@@ -67,8 +70,8 @@ if (isMobile.any()) {
 function collapsCatalog() {
    $('.catalog-menu__head').removeClass('_active');
    $('.catalog-menu__body').removeClass('_active');
-   menuOpened.catalog =
-      resetCatalogMenu();
+   menuOpened.catalog = false;
+   resetCatalogMenu();
    scrollLock()
 }
 
@@ -92,7 +95,7 @@ $('.main-menu__icon').click(function () {
    $(this).toggleClass('_active');
    $(this).parent().toggleClass('_active');
    $('.main-menu__body').toggleClass('_active').scrollTop(0);
-   menuOpened.toggleMain();
+   menuOpened.toggle('main');
    scrollLock()
 });
 
@@ -102,4 +105,25 @@ $('button').on('mouseup', function () {
 });
 $('a').on('mouseup', function () {
    $(this).blur();
+});
+
+//back-up
+const initialBottomValue = $('.back-up').css('bottom');
+
+$(document).scroll(function (evt) {
+   let bottomValue = ($(document).scrollTop() + $(window).height()) - ($(document).height() - 350);
+   if ($(document).scrollTop() > $(window).height() * 0.6) {
+      $('.back-up').addClass('_active');
+   } else {
+      $('.back-up').removeClass('_active');
+   }
+   if (bottomValue > 0) {
+      $('.back-up').css('bottom', bottomValue);
+   } else {
+      $('.back-up').css('bottom', initialBottomValue);
+   }
+});
+
+$('.back-up__button').on('click', function () {
+   $('html, body').animate({ scrollTop: 0, }, 500);
 });

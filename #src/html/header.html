@@ -27,7 +27,7 @@
                         <li class="social-block__item"><a href="#" class="social-block__link social-block__link_viber"><span class='_visualy-hidden'>Viber</span></a></li>
                      </ul>
                   </div>
-                  <a href="" class="top-row-header__login" data-move="main-menu__body,0,661">Вход/регистрация</a>
+                  <div class="top-row-header__login" data-move="main-menu__body,0,661"><a href="#popup-login" class="js-popup-link">Вход</a>/<a href="#popup-sign-up" class="js-popup-link">регистрация</a></div>
                </div>
             </div>
             <nav class="header__bottom bottom-row-header">
@@ -267,7 +267,7 @@
                   </div>
                </div>
                <div class="bottom-row-header__main-menu main-menu" data-move="header__row,last,967">
-                  <button type="button" class="main-menu__icon">
+                  <button type="button" class="main-menu__icon" aria-label="главное меню">
                      <span></span>
                      <span></span>
                      <span></span>
@@ -282,11 +282,11 @@
                   </div>
                </div>
                <div class="bottom-row-header__search search-header" data-move="main-menu__body,0,660">
-                  <form action="#">
-                     <div class="search-header__cell">
-                        <label for="search" class="_visualy-hidden">Поиск</label>
-                        <input type="search" name="search" class="search-header__input" placeholder="Поиск">
-                        <button type="submit" class="search-header__submit"><span class='_visualy-hidden '>Искать</span></button>
+                  <form action="#" class="form">
+                     <div class="form-item form-item_search">
+                        <label for="search" class="form-label _visualy-hidden">Поиск</label>
+                        <input type="search" name="search" class="form-input form-input_search" placeholder="Поиск">
+                        <button type="submit" class="form-submit form-submit_search" aria-label="Искать"></button>
                      </div>
                   </form>
                </div>

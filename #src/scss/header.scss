@@ -1,20 +1,21 @@
 /*HEADER-START*/
 .header {
-   flex: 0 0 160px;
+   flex: 0 0 175px;
    background-color: #fff;
    @media (max-width: $md2 + px) {
       position: fixed;
+      z-index: 5;
       top: 0;
       left: 0;
       width: 100%;
    }
    // .header__content
    &__content {
+      height: 100%;
    }
    // .header__row
    &__row {
       display: flex;
-      margin: 0 -15px;
       min-height: 50px;
    }
    // .header__block
@@ -192,6 +193,15 @@
       line-height: 1.2;
       font-weight: 400;
       color: #000000;
+      a {
+         color: inherit;
+         @media (min-width: $md2 + px) {
+            &:hover {
+               font-weight: 500;
+               text-decoration: underline;
+            }
+         }
+      }
       &::before {
          content: "";
          margin-right: 15px;
@@ -200,11 +210,7 @@
          height: 22px;
          background: url("../img/icons/login.png") center / 100% no-repeat;
       }
-      @media (min-width: $md2 + px) {
-         &:hover {
-            font-weight: 500;
-         }
-      }
+
       @media (max-width: $md4 + px) {
          padding: 10px;
          font-size: 18px;
@@ -306,7 +312,7 @@
       min-width: 170px;
       @media (max-width: $md2 + px) {
          padding: 0px 10px;
-         align-self: stretch;
+         align-self: flex-start;
       }
       @media (max-width: $md4 + px) {
          margin-bottom: 10px;
@@ -386,20 +392,20 @@
       display: none;
       width: 100%;
       @media (max-width: $md2 + px) {
-         display: block;
          width: 300px;
          height: calc(100vh - 103px);
          background-color: $mainColor;
-         transform: translate(-100%, 0);
-         transition: all 0.3s ease 0s;
          overflow: hidden;
+      }
+      @media (max-width: $md4 + px) {
+         display: block;
+         height: calc(100vh - 100%);
+         transform: translate(-100%, 0);
+         transition: transform 0.3s ease 0s;
          &._active {
             box-shadow: 0 10px 10px #000;
             transform: translate(0, 0);
          }
-      }
-      @media (max-width: $md4 + px) {
-         height: calc(100vh - 100%);
       }
    }
    // .catalog-menu__wrap
@@ -500,10 +506,10 @@
       max-height: 100%;
       background-color: #e78216;
       transform: translate(-100%, 0);
-      transition: all 0.2s ease 0s;
+      transition: transform 0.2s ease 0s;
       overflow-y: auto;
       @media (min-width: $md2 + px) {
-         transition: all 0s ease 0s;
+         transition: transform 0s ease 0s;
       }
    }
    // .catalog-submenu__back
@@ -724,42 +730,6 @@
    }
 }
 
-.search-header {
-   form {
-      height: 100%;
-   }
-   // .search-header__cell
-   &__cell {
-      padding: 0px 13px 0 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      background-color: #f7f7f7;
-   }
-   // .search-header__input
-   &__input {
-      padding: 10px 13px;
-      flex: 1 1 auto;
-      min-width: 0px;
-      &::placeholder {
-         font-size: 15px;
-         line-height: 1.2;
-         font-weight: 400;
-         color: #000000;
-      }
-      &:focus {
-         outline: none;
-      }
-   }
-   //.search-header__submit
-   &__submit {
-      flex: 0 0 20px;
-      width: 20px;
-      height: 20px;
-      background: url("../img/icons/search.png") center / 100% no-repeat;
-   }
-}
-
 .phone-contacts {
    display: flex;
    &::before {
@@ -789,6 +759,13 @@
       span {
          font-weight: 700;
       }
+      // .phone-contacts__link_footer
+      &_footer {
+         color: #fff;
+         @media (max-width: $md2 + px) {
+            font-size: 13px;
+         }
+      }
       @media (max-width: $md2 + px) {
          color: #fff;
       }
@@ -798,7 +775,7 @@
 .email-contacts {
    display: flex;
    font-size: 15px;
-   line-height: 18px;
+   line-height: 1.2;
    font-weight: 400;
    color: #000000;
    &::before {
@@ -817,6 +794,12 @@
       word-wrap: break-word;
       @media (max-width: $md2 + px) {
          color: #fff;
+      }
+   }
+   &_footer {
+      color: #fff;
+      @media (max-width: $md4 + px) {
+         font-size: 13px;
       }
    }
 }
@@ -839,12 +822,10 @@
    // .social-block__link
    &__link {
       display: block;
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       @media (min-width: $md2 + px) {
-         width: 30px;
-         height: 30px;
          &:hover {
             opacity: 0.6;
          }
