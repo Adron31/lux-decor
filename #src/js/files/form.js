@@ -1,7 +1,8 @@
 const forms = $('.form');
 const popupForms = $('.form-popup');
+const feedbackForms = $('.form_feedback');
 const timeout = 10000;
-const duration = 600;
+const duration = 400;
 let timerId = null;
 
 //фокус на полях ввода
@@ -27,7 +28,7 @@ forms.find('.form__toggle-pass').click(function () {
 });
 
 //feedback-form
-$('.form_feedback').submit(function (evt) {
+feedbackForms.submit(function (evt) {
    formSend($(this), evt);
 });
 
@@ -54,6 +55,7 @@ $('#user-tel').inputmask({
 
 //всплывающие сообщения полей попап-форм
 createFormPopupMessage(popupForms);
+createFormPopupMessage(feedbackForms);
 
 function createFormPopupMessage(form) {
    const inputs = form.find('.js-req');

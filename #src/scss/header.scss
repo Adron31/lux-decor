@@ -487,28 +487,29 @@
    }
 }
 .catalog-submenu {
-   max-width: 0;
+   display: none;
    width: 100%;
    overflow: hidden;
-   transition: max-width 0s ease 0.2s;
+
    @media (max-width: $md2 + px) {
       height: 100%;
    }
    &._active {
-      max-width: 100%;
-      transition: max-width 0s ease 0s;
+      display: block;
       .catalog-submenu__body {
-         transform: translate(0, 0);
+         @media (min-width: $md2 + px) {
+            transform: translate(0, 0);
+         }
       }
    }
    // .catalog-submenu__body
    &__body {
       max-height: 100%;
       background-color: #e78216;
-      transform: translate(-100%, 0);
       transition: transform 0.2s ease 0s;
       overflow-y: auto;
       @media (min-width: $md2 + px) {
+         transform: translate(-100%, 0);
          transition: transform 0s ease 0s;
       }
    }

@@ -339,7 +339,7 @@ $('.product-card__button').click(function (evt) {
 
 let popupClickHandler = function (evt) {
    //закрывает попап при клике вне окна
-   if (evt.target === $(this).find('.popup__body')[0]) {
+   if (evt.target === $(this).find('.popup__body')[0] || evt.target === $(this)[0]) {
       popupClose();
       bodyScrollUnlock();
    }
@@ -375,14 +375,14 @@ function popupClose() {
 function bodyScrollLock() {
    const paddingValue = $(window).outerWidth() - $('body').innerWidth();
    if ($('body').css('paddingRight') === '0px') {
-      $('body').addClass('_lock').css('paddingRight', paddingValue + 'px');
+      $('body').addClass('_popup-open').css('paddingRight', paddingValue + 'px');
    }
 }
 
 function bodyScrollUnlock() {
    const timeout = 300;
    setTimeout(function () {
-      $('body').removeClass('_lock').css('paddingRight', '0px');
+      $('body').removeClass('_popup-open').css('paddingRight', '0px');
    }, timeout);
 }
 
@@ -394,8 +394,9 @@ function popupMessageOpen(message) {
 
 const forms = $('.form');
 const popupForms = $('.form-popup');
+const feedbackForms = $('.form_feedback');
 const timeout = 10000;
-const duration = 600;
+const duration = 400;
 let timerId = null;
 
 //фокус на полях ввода
@@ -421,7 +422,7 @@ forms.find('.form__toggle-pass').click(function () {
 });
 
 //feedback-form
-$('.form_feedback').submit(function (evt) {
+feedbackForms.submit(function (evt) {
    formSend($(this), evt);
 });
 
@@ -448,6 +449,7 @@ $('#user-tel').inputmask({
 
 //всплывающие сообщения полей попап-форм
 createFormPopupMessage(popupForms);
+createFormPopupMessage(feedbackForms);
 
 function createFormPopupMessage(form) {
    const inputs = form.find('.js-req');
@@ -639,19 +641,6 @@ function formClear(form) {
    removeError(inputs);
 }
 //==CATALOG===================================
-let menuOpened = {
-   catalog: false,
-   main: false,
-   toggle: function (key) {
-      this[key] = !this[key];
-   },
-   or: function () {
-      return this.catalog || this.main;
-   },
-   and: function () {
-      return this.catalog && this.main;
-   },
-};
 let breakpoint_md4 = 660;
 
 resetCatalogMenu();
@@ -666,8 +655,7 @@ $('.catalog-menu__head').click(function () {
          $('.catalog-menu__body').slideToggle(300);
       }
       resetCatalogMenu();
-      menuOpened.toggle('catalog');
-      scrollLock();
+      $('body').toggleClass('_catalog-menu-open');
    } else {
       $('.catalog-menu__body').slideToggle(300);
    }
@@ -710,9 +698,7 @@ if (isMobile.any()) {
 function collapsCatalog() {
    $('.catalog-menu__head').removeClass('_active');
    $('.catalog-menu__body').removeClass('_active');
-   menuOpened.catalog = false;
    resetCatalogMenu();
-   scrollLock()
 }
 
 function resetCatalogMenu() {
@@ -722,21 +708,12 @@ function resetCatalogMenu() {
    $('.catalog-submenu__body').scrollTop(0);
 }
 
-function scrollLock() {
-   if (menuOpened.or() && !menuOpened.and()) {
-      $('body').addClass('_lock');
-   } else if (!menuOpened.and()) {
-      $('body').removeClass('_lock');
-   }
-}
-
 //MAIN-MENU
 $('.main-menu__icon').click(function () {
    $(this).toggleClass('_active');
    $(this).parent().toggleClass('_active');
    $('.main-menu__body').toggleClass('_active').scrollTop(0);
-   menuOpened.toggle('main');
-   scrollLock()
+   $('body').toggleClass('_main-menu-open');
 });
 
 //no-focused click

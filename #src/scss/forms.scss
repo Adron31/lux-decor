@@ -133,7 +133,7 @@
    font-weight: 400;
    color: #000000;
    @media (max-width: $md4 + px) {
-      padding: 8px;
+      // padding: 8px;
       font-size: 13px;
    }
    &::placeholder {

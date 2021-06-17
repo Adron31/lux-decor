@@ -13,7 +13,9 @@
 //==RESET STYLE & COMMON PARAMETERS=======================================
 @import "null";
 body {
-   &._lock {
+   &._catalog-menu-open,
+   &._main-menu-open,
+   &._popup-open {
       overflow: hidden;
    }
 }
@@ -51,54 +53,16 @@ button:focus {
 
 //==IMPORT PAGES STYLE & PAGE ELEMENTS STYLE
 @import "header";
+@import "home";
 @import "footer";
 @import "popup";
 //---------------------------------------------------------------------
 
-//==MAIN BLOCK=========================================================
-.page {
-   flex: 1 1 auto;
-   padding-top: 20px;
-   padding-bottom: 76px;
-   @media (max-width: $md2 + px) {
-      padding-top: 125px;
-   }
-   @media (max-width: $md4 + px) {
-      padding-top: 70px;
-      padding-bottom: 46px;
-   }
-   // .page__main-slider
-   &__inner {
-      @include adaptiv-value(margin-bottom, 45, 20, 1);
-   }
-   // .page__popular-products
-   &__popular-products {
-      @include adaptiv-value(margin-bottom, 30, 20, 1);
-   }
-   // .page__popular-promo
-   &__promo-products {
-      @include adaptiv-value(margin-bottom, 45, 20, 1);
-   }
-   // .page__subscribe
-   &__feedback {
-      @include adaptiv-value(margin-bottom, 45, 20, 1);
-   }
-   // .page__guarantee
-   &__guarantee {
-      @include adaptiv-value(margin-bottom, 45, 20, 1);
-   }
-   // .page__useful
-   &__useful {
-      @include adaptiv-value(margin-bottom, 45, 20, 1);
-   }
-   // .page__about-us
-   &__about-us {
-   }
-}
 //general classes
 .btn {
    padding: 15px 20px;
    width: 100%;
+   max-width: 320px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -170,6 +134,7 @@ button:focus {
    }
    //.btn_order
    &_order {
+      text-align: center;
       &::before {
          display: block;
          transition: all 0.3s ease 0s;
@@ -456,35 +421,7 @@ button:focus {
    }
 }
 //----------------------------------------------------------------
-//inner
-.inner {
-   @media (min-width: $md2 + px) {
-      padding: 0 0 0 25%;
-      margin-left: auto;
-   }
-}
-
-.main-slider {
-   margin: 0 auto;
-   max-width: 880px;
-   width: 100%;
-   // .main-slider__item
-   &__item {
-      position: relative;
-      width: 880px;
-      @include adaptiv-value(height, 440, 160, 1);
-      img {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-      }
-   }
-}
-
-//products section
+//section title================================================
 .head-section {
    position: relative;
    display: flex;
@@ -533,254 +470,8 @@ button:focus {
       }
    }
 }
-.products-section {
-   // .products-section__container
-   &__container {
-      @media (max-width: $md0 + px) {
-         padding: 0 15px;
-      }
-   }
-   // .products-section__head
-   &__head {
-      margin-bottom: 40px;
-      @media (max-width: $md3 + px) {
-         margin-bottom: 20px;
-      }
-      @media (max-width: $md5 + px) {
-         justify-content: space-between;
-      }
-   }
-   // .products-section__slider
-   &__slider {
-   }
-}
-.slider-products {
-   // .slider-products__item
-   &__item {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-
-      // .slider-products__content
-      &__content {
-      }
-   }
-}
-//---------------------------------------------------
-//feedback-section========================================
-.feedback-section {
-   // .subscribe-section__row
-   &__row {
-      padding: 21px 112px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #00b5ab;
-      background: url("../img/bg_sub.png") 0 center / cover no-repeat;
-      @media (max-width: $md0 + px) {
-         padding: 20px;
-      }
-      @media (max-width: $md2 + px) {
-         flex-wrap: wrap;
-      }
-   }
-   // .subscribe-section__column
-   &__column {
-      flex: 1 1 50%;
-      margin-right: 20px;
-      &:last-child {
-         margin-right: 0;
-      }
-      @media (max-width: $md2 + px) {
-         margin: 0 0 20px 0;
-         flex: 1 1 100%;
-         max-width: 500px;
-         &:last-child {
-            margin: 0;
-            max-width: 450px;
-         }
-      }
-      @media (max-width: $md4 + px) {
-         margin: 0 0 10px 0;
-         &:last-child {
-            margin: 0;
-            max-width: 350px;
-         }
-      }
-   }
-   // .subscribe-section__title
-   &__title {
-      width: 100%;
-      max-width: 100%;
-      font-size: 16px;
-      line-height: 1.2;
-      font-weight: 500;
-      text-transform: uppercase;
-      color: #fefefe;
-      @media (max-width: $md2 + px) {
-         text-align: center;
-      }
-      @media (max-width: $md4 + px) {
-         font-size: 14px;
-      }
-   }
-   // .subscribe-section__form
-   &__form {
-   }
-}
-//------------------------------
-//guarantee==============================================
-
-.guarantee {
-   // .guarantee__head
-   &__head {
-      margin-bottom: 35px;
-      @media (max-width: $md3 + px) {
-         margin-bottom: 15px;
-      }
-   }
-   // .guarantee__row
-   &__row {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      @media (max-width: $md5 + px) {
-         flex-wrap: wrap;
-      }
-   }
-   // .guarantee__column
-   &__column {
-      flex: 0 1 25%;
-      margin: 0 15px;
-      background-color: #fff;
-      @media (max-width: $md2 + px) {
-         margin: 5px;
-      }
-      @media (max-width: $md5 + px) {
-         flex: 1 1 40%;
-      }
-   }
-   // .guarantee__content
-   &__content {
-      margin: 0 auto;
-      padding: 20px 5px 15px;
-      max-width: 190px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &::before {
-         content: "";
-         margin: 0 0 10px;
-         flex: 0 0 60px;
-         width: 60px;
-         height: 60px;
-         background-position: center;
-         background-size: contain;
-         background-repeat: no-repeat;
-         @media (max-width: $md4 + px) {
-            flex: 0 0 40px;
-            width: 40px;
-            height: 40px;
-         }
-      }
-      &_1 {
-         &::before {
-            background-image: url("../img/icons/guarantee/01.svg");
-         }
-      }
-      &_2 {
-         &::before {
-            background-image: url("../img/icons/guarantee/02.svg");
-         }
-      }
-      &_3 {
-         &::before {
-            background-image: url("../img/icons/guarantee/03.svg");
-         }
-      }
-      &_4 {
-         &::before {
-            background-image: url("../img/icons/guarantee/04.svg");
-         }
-      }
-   }
-   // .guarantee__text
-   &__text {
-      flex: 1 1 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 18px;
-      @include adaptiv-font(18, 12, 1);
-      line-height: 1.22;
-      font-weight: 400;
-      color: #000000;
-   }
-}
-
-//useful-section
-
-.useful {
-   // .useful__head
-   &__head {
-      margin-bottom: 40px;
-      @media (max-width: $md2 + px) {
-         margin-bottom: 20px;
-      }
-   }
-   // .useful__slider
-   &__slider {
-   }
-}
-
-.slider-useful {
-   // .slider-useful__slide
-   &__slide {
-      padding: 0 15px;
-      @media (max-width: $md2 + px) {
-         padding: 0 10px;
-      }
-   }
-   // .slider-useful__link
-   &__link {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 0;
-      padding-bottom: 51.8%;
-      img {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-      }
-   }
-}
-
-//about
-.about-us {
-   // .about-us__container
-   &__container {
-      padding: 0 15px;
-   }
-   // .about-us__head
-   &__head {
-      margin-bottom: 25px;
-   }
-   // .about-us__text
-   &__text {
-      font-size: 14px;
-      line-height: 1.3;
-      font-weight: 400;
-      color: #7c7373;
-   }
-}
-
-// BACK-UP
+//-----------------------------------------------------------
+// ==BACK-UP====================================================
 .back-up {
    position: fixed;
    z-index: 5;
@@ -788,11 +479,15 @@ button:focus {
    right: calc((100vw - #{$maxWidthContainer + "px"}) / 2 - 130px);
    width: 76px;
    height: 76px;
+   display: none;
    background-color: $mainColor;
    transform: translate(0, 100px);
    transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
    opacity: 0;
    visibility: hidden;
+   @media (min-width: $md2 + px) {
+      display: block;
+   }
    @media (max-width: 1500px) {
       right: 20px;
    }
@@ -811,3 +506,4 @@ button:focus {
       background: url("../img/icons/back_up_arrow.svg") center center / 30px 43px no-repeat;
    }
 }
+//-------------------------------------------------------------

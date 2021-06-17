@@ -20,7 +20,7 @@ $('.product-card__button').click(function (evt) {
 
 let popupClickHandler = function (evt) {
    //закрывает попап при клике вне окна
-   if (evt.target === $(this).find('.popup__body')[0]) {
+   if (evt.target === $(this).find('.popup__body')[0] || evt.target === $(this)[0]) {
       popupClose();
       bodyScrollUnlock();
    }
@@ -56,14 +56,14 @@ function popupClose() {
 function bodyScrollLock() {
    const paddingValue = $(window).outerWidth() - $('body').innerWidth();
    if ($('body').css('paddingRight') === '0px') {
-      $('body').addClass('_lock').css('paddingRight', paddingValue + 'px');
+      $('body').addClass('_popup-open').css('paddingRight', paddingValue + 'px');
    }
 }
 
 function bodyScrollUnlock() {
    const timeout = 300;
    setTimeout(function () {
-      $('body').removeClass('_lock').css('paddingRight', '0px');
+      $('body').removeClass('_popup-open').css('paddingRight', '0px');
    }, timeout);
 }
 

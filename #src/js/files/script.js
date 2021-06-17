@@ -1,17 +1,4 @@
 //==CATALOG===================================
-let menuOpened = {
-   catalog: false,
-   main: false,
-   toggle: function (key) {
-      this[key] = !this[key];
-   },
-   or: function () {
-      return this.catalog || this.main;
-   },
-   and: function () {
-      return this.catalog && this.main;
-   },
-};
 let breakpoint_md4 = 660;
 
 resetCatalogMenu();
@@ -26,8 +13,7 @@ $('.catalog-menu__head').click(function () {
          $('.catalog-menu__body').slideToggle(300);
       }
       resetCatalogMenu();
-      menuOpened.toggle('catalog');
-      scrollLock();
+      $('body').toggleClass('_catalog-menu-open');
    } else {
       $('.catalog-menu__body').slideToggle(300);
    }
@@ -70,9 +56,7 @@ if (isMobile.any()) {
 function collapsCatalog() {
    $('.catalog-menu__head').removeClass('_active');
    $('.catalog-menu__body').removeClass('_active');
-   menuOpened.catalog = false;
    resetCatalogMenu();
-   scrollLock()
 }
 
 function resetCatalogMenu() {
@@ -82,21 +66,12 @@ function resetCatalogMenu() {
    $('.catalog-submenu__body').scrollTop(0);
 }
 
-function scrollLock() {
-   if (menuOpened.or() && !menuOpened.and()) {
-      $('body').addClass('_lock');
-   } else if (!menuOpened.and()) {
-      $('body').removeClass('_lock');
-   }
-}
-
 //MAIN-MENU
 $('.main-menu__icon').click(function () {
    $(this).toggleClass('_active');
    $(this).parent().toggleClass('_active');
    $('.main-menu__body').toggleClass('_active').scrollTop(0);
-   menuOpened.toggle('main');
-   scrollLock()
+   $('body').toggleClass('_main-menu-open');
 });
 
 //no-focused click
