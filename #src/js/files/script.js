@@ -82,6 +82,12 @@ $('a').on('mouseup', function () {
    $(this).blur();
 });
 
+//sort-catalog
+$('.sort__select').click(function () {
+   $(this).toggleClass('_active');
+   $('.sort__list').slideToggle(100);
+});
+
 //back-up
 const initialBottomValue = $('.back-up').css('bottom');
 

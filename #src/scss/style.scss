@@ -54,10 +54,45 @@ button:focus {
 //==IMPORT PAGES STYLE & PAGE ELEMENTS STYLE
 @import "header";
 @import "home";
+@import "catalog";
 @import "footer";
 @import "popup";
 //---------------------------------------------------------------------
-
+.breadcrumbs {
+   // .breadcrumbs__container
+   &__container {
+      padding: 0px 0px 0px 10px;
+   }
+   // .breadcrumbs__list
+   &__list {
+      display: flex;
+   }
+   // .breadcrumbs__item
+   &__item {
+      margin: 0 5px 0 0;
+      color: #a49f9f;
+   }
+   // .breadcrumbs__link
+   &__link {
+      font-family: SourceSansPro;
+      padding: 0px 0px 0px 5px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #a49f9f;
+      // .breadcrumbs__link_home
+      &_home {
+         display: block;
+         width: 16px;
+         height: 14px;
+         background-color: #a49f9f;
+         background: url("../img/icons/home-page.png") center / 100% no-repeat;
+      }
+      // .breadcrumbs__link_current
+      &_current {
+         color: #2d2828;
+      }
+   }
+}
 //general classes
 .btn {
    padding: 15px 20px;

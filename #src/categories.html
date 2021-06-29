@@ -26,376 +26,398 @@
                         <div class="sort__label">Сотрировать по:</div>
                         <div class="sort__select">
                            <div class="sort__value">
-                              <span></span>
+                              <span>популярные</span>
                            </div>
                            <ul class="sort__list">
                               <li class="sort__item"><a class="sort__link">Цене по убыванию</a></li>
                               <li class="sort__item"><a class="sort__link">Цене по возрастани</a></li>
+                              <li class="sort__item"><a class="sort__link">Популярные</a></li>
                            </ul>
                         </div>
                      </div>
                   </div>
-
                </div>
-               <aside class="catalog__filter filter-catalog">
-                  <form action="#" class="filter-catalog__form form-filter">
-                     <fieldset class="form-filter__field">
-                        <legend class="form-filter__legend">Производитель</legend>
-                        <ul class="form-filter__list">
-                           <li class="form-filter__item filter-item">
-                              <label for="colors" class="filter-item__label">Colors</label>
-                              <input id="colors" type="checkbox" name="colors" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="max-meyer" class="filter-item__label">Max Meyer</label>
-                              <input id="max-meyer" type="checkbox" name="max-meyer" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="kompozit" class="filter-item__label">Kompozit</label>
-                              <input id="kompozit" type="checkbox" name="kompozit" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="kale" class="filter-item__label">Kale</label>
-                              <input id="kale" type="checkbox" name="kale" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="antica-signoria" class="filter-item__label">Antica Signoria</label>
-                              <input id="antica-signoria" type="checkbox" name="antica-signoria" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="ferrara" class="filter-item__label">Ferrara</label>
-                              <input id="ferrara" type="checkbox" name="ferrara" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="rossetti" class="filter-item__label">Rossetti</label>
-                              <input id="rossetti" type="checkbox" name="rossetti" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="vasco" class="filter-item__label">Vasco</label>
-                              <input id="vasco" type="checkbox" name="vasco" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="spiver" class="filter-item__label">Spiver</label>
-                              <input id="spiver" type="checkbox" name="spiver" class="filter-item__checkbox">
-                           </li>
+               <div class="catalog__row">
+                  <aside class="catalog__filter filter-catalog">
+                     <form action="#" class="filter-catalog__form form-filter">
+                        <fieldset class="form-filter__field">
+                           <legend class="form-filter__legend">Производитель</legend>
+                           <ul class="form-filter__list">
+                              <li class="form-filter__item filter-item">
+                                 <input id="colors" type="checkbox" name="colors" class="filter-item__checkbox">
+                                 <label for="colors" class="filter-item__label">Colors</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="max-meyer" type="checkbox" name="max-meyer" class="filter-item__checkbox">
+                                 <label for="max-meyer" class="filter-item__label">Max Meyer</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="kompozit" type="checkbox" name="kompozit" class="filter-item__checkbox">
+                                 <label for="kompozit" class="filter-item__label">Kompozit</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="kale" type="checkbox" name="kale" class="filter-item__checkbox">
+                                 <label for="kale" class="filter-item__label">Kale</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="antica-signoria" type="checkbox" name="antica-signoria" class="filter-item__checkbox">
+                                 <label for="antica-signoria" class="filter-item__label">Antica Signoria</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="ferrara" type="checkbox" name="ferrara" class="filter-item__checkbox">
+                                 <label for="ferrara" class="filter-item__label">Ferrara</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="rossetti" type="checkbox" name="rossetti" class="filter-item__checkbox">
+                                 <label for="rossetti" class="filter-item__label">Rossetti</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="vasco" type="checkbox" name="vasco" class="filter-item__checkbox">
+                                 <label for="vasco" class="filter-item__label">Vasco</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="spiver" type="checkbox" name="spiver" class="filter-item__checkbox">
+                                 <label for="spiver" class="filter-item__label">Spiver</label>
+                              </li>
+                           </ul>
+                           <button type="button" class="form-filter__button">Открыть все</button>
+                        </fieldset>
+                        <fieldset class="form-filter__field">
+                           <legend class="form-filter__legend">Страна производитель</legend>
+                           <ul class="form-filter__list">
+                              <li class="form-filter__item filter-item">
+                                 <input id="ukraine" type="checkbox" name="ukraine" class="filter-item__checkbox">
+                                 <label for="ukraine" class="filter-item__label">Украина</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="italy" type="checkbox" name="italy" class="filter-item__checkbox">
+                                 <label for="italy" class="filter-item__label">Италия</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="germany" type="checkbox" name="germany" class="filter-item__checkbox">
+                                 <label for="germany" class="filter-item__label">Германия</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="denmark" type="checkbox" name="denmark" class="filter-item__checkbox">
+                                 <label for="denmark" class="filter-item__label">Дания</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="poland" type="checkbox" name="poland" class="filter-item__checkbox">
+                                 <label for="poland" class="filter-item__label">Польша</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="sweden" type="checkbox" name="sweden" class="filter-item__checkbox">
+                                 <label for="sweden" class="filter-item__label">Швеция</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="usa" type="checkbox" name="usa" class="filter-item__checkbox">
+                                 <label for="usa" class="filter-item__label">США</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="england" type="checkbox" name="england" class="filter-item__checkbox">
+                                 <label for="england" class="filter-item__label">Англия</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="estonia" type="checkbox" name="estonia" class="filter-item__checkbox">
+                                 <label for="estonia" class="filter-item__label">Эстония</label>
+                              </li>
+                           </ul>
+                           <button type="button" class="form-filter__button">Открыть все</button>
+                        </fieldset>
+                        <fieldset class="form-filter__field">
+                           <legend class="form-filter__legend">Назначение</legend>
+                           <ul class="form-filter__list">
+                              <li class="form-filter__item filter-item">
+                                 <input id="external-works" type="checkbox" name="external-works" class="filter-item__checkbox">
+                                 <label for="external-works" class="filter-item__label">Внешние работы</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="internal-works" type="checkbox" name="internal-works" class="filter-item__checkbox">
+                                 <label for="internal-works" class="filter-item__label">Внутренние работы</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="for-metal" type="checkbox" name="for-metal" class="filter-item__checkbox">
+                                 <label for="for-metal" class="filter-item__label">Для металла</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="for-wood" type="checkbox" name="for-wood" class="filter-item__checkbox">
+                                 <label for="for-wood" class="filter-item__label">Для дерева</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="for-floor" type="checkbox" name="for-floor" class="filter-item__checkbox">
+                                 <label for="for-floor" class="filter-item__label">Для пола</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="for-roof" type="checkbox" name="for-roof" class="filter-item__checkbox">
+                                 <label for="for-roof" class="filter-item__label">Для крыши</label>
+                              </li>
+                              <li class="form-filter__item filter-item">
+                                 <input id="special" type="checkbox" name="special" class="filter-item__checkbox">
+                                 <label for="special" class="filter-item__label">Спец. назначения</label>
+                              </li>
+                           </ul>
+                        </fieldset>
+                        <fieldset class="form-filter__field">
+                           <legend class="form-filter__legend">ЦЕНА</legend>
+                           <div class="form-filter__item filter-price">
+                              <div id="price-slider" class="filter-price__slider"></div>
+                              <div class="filter-price__values">
+                                 <input id="min-value-price" type="text" class="filter-price__input filter-price__input_min">
+                                 <input id="max-value-price" type="text" class="filter-price__input filter-price__input_max">
+                              </div>
+                           </div>
+                        </fieldset>
+                     </form>
+                  </aside>
+                  <main class="catalog__products products-catalog">
+                     <ul class="products-catalog__list">
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                        <li class="products-catalog__item">
+                           <div class="products-catalog__card product-card">
+                              <a href="#" class="product-card__link">
+                                 <div class="product-card__sticker product-card__sticker_hit">
+                                    <span>Хит Продаж</span>
+                                 </div>
+                                 <div class="product-card__image">
+                                    <img src="img/products/01.jpg" alt="декоративное покрытие">
+                                 </div>
+                                 <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
+                                 <div class="product-card__price price-products">
+                                    <p class="price-products__old">647,62 грн.</p>
+                                    <p class="price-products__new">647,62 грн.</p>
+                                 </div>
+                              </a>
+                              <a class="product-card__button btn btn_card">Купить</a>
+                              <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
+                           </div>
+                        </li>
+                     </ul>
+                     <div class="products-catalog__pagination pagination">
+                        <a href="#" class="pagination__arrow pagination__arrow_prew"><span class='_visualy-hidden'>предыдущая</span></a>
+                        <ul class="pagination__list">
+                           <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                           <li class="pagination__item  pagination__item_current">3</li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">7</a></li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">8</a></li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">9</a></li>
+                           <li class="pagination__item"><a href="#" class="pagination__link">10</a></li>
                         </ul>
-                        <button type="button" class="form-filter__button">Открыть все</button>
-                     </fieldset>
-                     <fieldset class="form-filter__field">
-                        <legend class="form-filter__legend">Страна производитель</legend>
-                        <ul class="form-filter__list">
-                           <li class="form-filter__item filter-item">
-                              <label for="ukraine" class="filter-item__label">Украина</label>
-                              <input id="ukraine" type="checkbox" name="ukraine" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="italy" class="filter-item__label">Италия</label>
-                              <input id="italy" type="checkbox" name="italy" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="germany" class="filter-item__label">Германия</label>
-                              <input id="germany" type="checkbox" name="germany" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="denmark" class="filter-item__label">Дания</label>
-                              <input id="denmark" type="checkbox" name="denmark" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="poland" class="filter-item__label">Польша</label>
-                              <input id="poland" type="checkbox" name="poland" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="sweden" class="filter-item__label">Швеция</label>
-                              <input id="sweden" type="checkbox" name="sweden" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="usa" class="filter-item__label">США</label>
-                              <input id="usa" type="checkbox" name="usa" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="england" class="filter-item__label">Англия</label>
-                              <input id="england" type="checkbox" name="england" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="estonia" class="filter-item__label">Эстония</label>
-                              <input id="estonia" type="checkbox" name="estonia" class="filter-item__checkbox">
-                           </li>
-                        </ul>
-                        <button type="button" class="form-filter__button">Открыть все</button>
-                     </fieldset>
-                     <fieldset class="form-filter__field">
-                        <legend class="form-filter__legend">Назначение</legend>
-                        <ul class="form-filter__list">
-                           <li class="form-filter__item filter-item">
-                              <label for="external-works" class="filter-item__label">Внешние работы</label>
-                              <input id="external-works" type="checkbox" name="external-works" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="internal-works" class="filter-item__label">Внутренние работы</label>
-                              <input id="internal-works" type="checkbox" name="internal-works" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="for-metal" class="filter-item__label">Для металла</label>
-                              <input id="for-metal" type="checkbox" name="for-metal" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="for-wood" class="filter-item__label">Для дерева</label>
-                              <input id="for-wood" type="checkbox" name="for-wood" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="for-floor" class="filter-item__label">Для пола</label>
-                              <input id="for-floor" type="checkbox" name="for-floor" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="for-roof" class="filter-item__label">Для крыши</label>
-                              <input id="for-roof" type="checkbox" name="for-roof" class="filter-item__checkbox">
-                           </li>
-                           <li class="form-filter__item filter-item">
-                              <label for="special" class="filter-item__label">Спец. назначения</label>
-                              <input id="special" type="checkbox" name="special" class="filter-item__checkbox">
-                           </li>
-                        </ul>
-                     </fieldset>
-                     <fieldset class="form-filter__field">
-                        <legend class="form-filter__legend">ЦЕНА</legend>
-                        <div class="form-filter__item filter-item">
-                           <input type="range" name="coast" class="filter-item__range">
-                        </div>
-                     </fieldset>
-                  </form>
-               </aside>
-               <main class="catalog__products products-catalog">
-                  <ul class="products-catalog__list">
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                     <li class="products-catalog__item">
-                        <div class="products-catalog__card product-card">
-                           <a href="#" class="product-card__link">
-                              <div class="product-card__sticker product-card__sticker_hit">
-                                 <span>Хит Продаж</span>
-                              </div>
-                              <div class="product-card__image">
-                                 <img src="img/products/01.jpg" alt="декоративное покрытие">
-                              </div>
-                              <h3 class="product-card__label">Декоративное покрытие <span>Ferrara Base S</span></h3>
-                              <div class="product-card__price price-products">
-                                 <p class="price-products__old">647,62 грн.</p>
-                                 <p class="price-products__new">647,62 грн.</p>
-                              </div>
-                           </a>
-                           <a class="product-card__button btn btn_card">Купить</a>
-                           <a href="#" class="product-card__compare"><span>Добавить к сравнению</span></a>
-                        </div>
-                     </li>
-                  </ul>
-               </main>
+                        <a href="#" class="pagination__arrow pagination__arrow_next"><span class='_visualy-hidden'>следующая</span></a>
+                     </div>
+                  </main>
+               </div>
             </div>
          </div>
          <section class="page__feedback feedback-section">

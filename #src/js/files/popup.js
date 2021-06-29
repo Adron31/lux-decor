@@ -28,7 +28,7 @@ let popupClickHandler = function (evt) {
 
 let windowKeydownHandler = function (evt) {
    const ESC_CODE = 27;
-   if (evt.keyCode === ESC_CODE) {
+   if (evt.key === ESC_CODE) {
       evt.preventDefault;
       popupClose();
       bodyScrollUnlock();
