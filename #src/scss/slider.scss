@@ -209,7 +209,7 @@
 }
 //дорожка ползунка
 .ui-slider {
-   height: 5px;
+   height: 4px;
    background-color: #dfdfdf;
    border-radius: 0;
    &-horizontal {
@@ -241,6 +241,7 @@
    //выбраный диапазон
    .ui-slider-range {
       background-color: #fc9a00;
+      height: 5px;
       &-min {
       }
       &-max {

@@ -1,5 +1,5 @@
 //==CATALOG===================================
-let breakpoint_md4 = 660;
+const breakpoint_md4 = 660;
 
 resetCatalogMenu();
 

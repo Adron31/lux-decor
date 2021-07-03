@@ -884,7 +884,7 @@ body.ie ._ibg img {
 }
 
 .ui-slider {
-  height: 5px;
+  height: 4px;
   background-color: #dfdfdf;
   border-radius: 0;
 }
@@ -916,6 +916,7 @@ body.ie ._ibg img {
 
 .ui-slider .ui-slider-range {
   background-color: #fc9a00;
+  height: 5px;
 }
 
 /*HEADER-START*/

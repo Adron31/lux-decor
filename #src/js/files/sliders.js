@@ -70,29 +70,25 @@ $('.slider-useful').slick({
    ]
 });
 //price-slider
-$(function () {
+$('#price-slider').slider({
+   animate: "slow",
+   range: true,
+   min: 0,
+   max: 20000,
+   values: [0, 20000],
+   slide: function (evt, ui) {
+      $("#min-value-price").val(ui.values[0]);
+      $("#max-value-price").val(ui.values[1]);
+   },
+});
 
+$("#min-value-price").val($("#price-slider").slider("values", 0));
+$("#max-value-price").val($("#price-slider").slider("values", 1));
 
-   $('#price-slider').slider({
-      animate: "slow",
-      range: true,
-      min: 0,
-      max: 20000,
-      values: [0, 20000],
-      slide: function (evt, ui) {
-         $("#min-value-price").val(ui.values[0]);
-         $("#max-value-price").val(ui.values[1]);
-      },
-      // slide: function (event, ui) {
-      // 	$("#max-value-price").val(ui.values[1]);
-      // }
-   });
-   $("#min-value-price").val($("#price-slider").slider("values", 0));
-   $("#max-value-price").val($("#price-slider").slider("values", 1));
-   $("#min-value-price").change(function (e) {
-      $("#price-slider").slider("values", 0, $(this).val());
-   });
-   $("#max-value-price").change(function (e) {
-      $("#price-slider").slider("values", 1, $(this).val());
-   });
+$("#min-value-price").change(function (e) {
+   $("#price-slider").slider("values", 0, $(this).val());
+});
+
+$("#max-value-price").change(function (e) {
+   $("#price-slider").slider("values", 1, $(this).val());
 });
