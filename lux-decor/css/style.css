@@ -735,7 +735,7 @@ button:focus {
 }
 
 .header__cart-link::before {
-  content: "";
+  content: '';
   margin-bottom: 10px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 35px;
@@ -828,7 +828,7 @@ button:focus {
 }
 
 .top-row-header__login::before {
-  content: "";
+  content: '';
   margin-right: 15px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 23px;
@@ -925,7 +925,7 @@ button:focus {
 
 .catalog-menu__head::before,
 .catalog-menu__head::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   right: 20px;
@@ -1003,19 +1003,20 @@ button:focus {
   background-color: #ff9c00;
 }
 
-.catalog-menu__link {
+.catalog-menu__button {
   position: relative;
   z-index: 2;
   padding: 20px 35px 20px 10px;
   display: block;
+  width: 100%;
   font-size: 17px;
   font-weight: 400;
   color: #ffffff;
 }
 
-.catalog-menu__link::before,
-.catalog-menu__link::after {
-  content: "";
+.catalog-menu__button::before,
+.catalog-menu__button::after {
+  content: '';
   position: absolute;
   top: 50%;
   right: 5px;
@@ -1025,7 +1026,7 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.catalog-menu__link::before {
+.catalog-menu__button::before {
   -webkit-transform-origin: 100% 100%;
       -ms-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
@@ -1033,7 +1034,7 @@ button:focus {
           transform: translate(-100%, 2px) rotate(45deg) rotate3d(0, 0, 1, -90deg) skewX(45deg);
 }
 
-.catalog-menu__link::after {
+.catalog-menu__button::after {
   -webkit-transform-origin: 0 100%;
       -ms-transform-origin: 0 100%;
           transform-origin: 0 100%;
@@ -1041,15 +1042,15 @@ button:focus {
           transform: translate(0, 2px) rotate(-45deg) rotate3d(0, 0, 1, -90deg) skewX(-45deg);
 }
 
-.catalog-menu__link._active {
+.catalog-menu__button._active {
   margin: 0 -7.5px;
   padding: 20px 17.5px;
   color: #000000;
   background-color: #fff;
 }
 
-.catalog-menu__link._active::before,
-.catalog-menu__link._active::after {
+.catalog-menu__button._active::before,
+.catalog-menu__button._active::after {
   background-color: #d8d8d8;
   right: 12.5px;
 }
@@ -1110,7 +1111,7 @@ button:focus {
 }
 
 .catalog-submenu__link_last::after {
-  content: "";
+  content: '';
   margin-left: 20px;
   width: 26px;
   height: 15px;
@@ -1202,7 +1203,7 @@ button:focus {
 }
 
 .phone-contacts::before {
-  content: "";
+  content: '';
   margin-right: 12px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 21px;
@@ -1242,7 +1243,7 @@ button:focus {
 }
 
 .email-contacts::before {
-  content: "";
+  content: '';
   margin-right: 12px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 23px;
@@ -3064,7 +3065,7 @@ button:focus {
     overflow-x: hidden;
   }
 
-  .catalog-menu__link {
+  .catalog-menu__button {
     padding: 15px 15px 15px 30px;
   }
 
@@ -3088,7 +3089,7 @@ button:focus {
   }
 
   .catalog-submenu__back::before {
-    content: "";
+    content: '';
     margin-right: 15px;
     width: 26px;
     height: 15px;
@@ -3124,7 +3125,7 @@ button:focus {
   }
 
   .main-menu::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
