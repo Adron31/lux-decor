@@ -286,13 +286,13 @@
             border: 1px solid $mainColorActive;
          }
          &::after {
-            transform: scale(1);
+            transform: translate(0, -50%) scale(1);
          }
       }
    }
    // .filter-item__label
    &__label {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       position: relative;
       display: flex;
       align-items: center;
@@ -326,14 +326,14 @@
       &::after {
          content: '';
          position: absolute;
-         top: 0;
+         top: 50%;
          left: 0;
          z-index: 3;
          display: block;
          width: 20px;
          height: 20px;
          background: url('../img/icons/checked.png') center center / 80% no-repeat;
-         transform: scale(0);
+         transform: translate(0, -50%) scale(0);
          transition: all 0.3s ease 0s;
          @media (max-width: $md3 + px) {
             width: 16px;

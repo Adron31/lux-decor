@@ -1802,15 +1802,15 @@ button:focus {
 }
 
 .filter-item__checkbox:checked + .filter-item__label::after {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: translate(0, -50%) scale(1);
+      -ms-transform: translate(0, -50%) scale(1);
+          transform: translate(0, -50%) scale(1);
 }
 
 .filter-item__label {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1845,16 +1845,16 @@ button:focus {
 .filter-item__label::after {
   content: '';
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   z-index: 3;
   display: block;
   width: 20px;
   height: 20px;
   background: url("../img/icons/checked.png") center center/80% no-repeat;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: translate(0, -50%) scale(0);
+      -ms-transform: translate(0, -50%) scale(0);
+          transform: translate(0, -50%) scale(0);
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
