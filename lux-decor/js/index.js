@@ -1,5 +1,5 @@
 {
-   "use strict"
+   "use strict";
    let ua = window.navigator.userAgent;
 let msie = ua.indexOf("MSIE");
 let isMobile = {
@@ -149,6 +149,8 @@ $('.slider-useful').slick({
 $('#price-slider').slider({
    animate: "slow",
    range: true,
+   keyboardSupport: true,
+   step: 10,
    min: 0,
    max: 20000,
    values: [0, 20000],
@@ -168,7 +170,7 @@ $("#min-value-price").change(function (e) {
 $("#max-value-price").change(function (e) {
    $("#price-slider").slider("values", 1, $(this).val());
 });
-
+$('#price-slider').draggable();
    $('.js-popup-link').click(function (evt) {
    const popupId = $(this).attr('href');
    evt.preventDefault();
@@ -602,4 +604,15 @@ $(document).scroll(function (evt) {
 $('.back-up__button').on('click', function () {
    $('html, body').animate({ scrollTop: 0, }, 500);
 });
+   const breakpoint_md3 = 768;
+
+if ($(window).outerWidth() < breakpoint_md3) {
+	$('.filter-catalog__form').css('display', 'none');
+	$('.filter-catalog__btn').click(function () {
+		$(this).toggleClass('_active');
+		$('.filter-catalog__form').slideToggle(300);
+	});
+
+}
+
 }

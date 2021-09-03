@@ -73,6 +73,8 @@ $('.slider-useful').slick({
 $('#price-slider').slider({
    animate: "slow",
    range: true,
+   keyboardSupport: true,
+   step: 10,
    min: 0,
    max: 20000,
    values: [0, 20000],
@@ -92,3 +94,4 @@ $("#min-value-price").change(function (e) {
 $("#max-value-price").change(function (e) {
    $("#price-slider").slider("values", 1, $(this).val());
 });
+$('#price-slider').draggable();

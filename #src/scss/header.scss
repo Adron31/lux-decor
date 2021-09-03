@@ -71,11 +71,11 @@
       background-color: #00b5ab;
       transition: all 0.3s ease 0s;
       &::before {
-         content: "";
+         content: '';
          margin-bottom: 10px;
          flex: 0 0 35px;
          width: 35px;
-         background: url("../img/icons/cart.svg") 0 0 / 100% no-repeat;
+         background: url('../img/icons/cart.svg') 0 0 / 100% no-repeat;
       }
       span {
          position: absolute;
@@ -121,7 +121,7 @@
          &::before {
             flex: 0 0 30px;
             width: 30px;
-            background-image: url("../img/icons/cart_2.svg");
+            background-image: url('../img/icons/cart_2.svg');
          }
          span {
             top: -8px;
@@ -203,12 +203,12 @@
          }
       }
       &::before {
-         content: "";
+         content: '';
          margin-right: 15px;
          flex: 0 0 23px;
          width: 23px;
          height: 22px;
-         background: url("../img/icons/login.png") center / 100% no-repeat;
+         background: url('../img/icons/login.png') center / 100% no-repeat;
       }
 
       @media (max-width: $md4 + px) {
@@ -348,11 +348,11 @@
       @media (max-width: $md4 + px) {
          height: 100%;
          font-size: 0;
-         background: #ff9c00 url("../img/icons/catalog.svg") center / 50% no-repeat;
+         background: #ff9c00 url('../img/icons/catalog.svg') center / 50% no-repeat;
       }
       &::before,
       &::after {
-         content: "";
+         content: '';
          position: absolute;
          top: 50%;
          right: 20px;
@@ -432,16 +432,18 @@
    }
    // .catalog-menu__item
    &__item {
+      display: flex;
       @media (min-width: $md2 + px) {
          position: relative;
       }
    }
-   // .catalog-menu__link
-   &__link {
+   // .catalog-menu__button
+   &__button {
+      flex-grow: 1;
       position: relative;
       z-index: 2;
       padding: 20px 35px 20px 10px;
-      display: block;
+      text-align: left;
       font-size: 17px;
       font-weight: 400;
       color: #ffffff;
@@ -450,7 +452,7 @@
       }
       &::before,
       &::after {
-         content: "";
+         content: '';
          position: absolute;
          top: 50%;
          right: 5px;
@@ -526,12 +528,12 @@
          color: #000000;
          background-color: #fff;
          &::before {
-            content: "";
+            content: '';
             margin-right: 15px;
             width: 26px;
             height: 15px;
             transform: rotate(180deg);
-            background: url("../img/icons/arrow.png") center / 100% no-repeat;
+            background: url('../img/icons/arrow.png') center / 100% no-repeat;
          }
       }
    }
@@ -567,11 +569,11 @@
          color: #000000;
          background-color: #fff;
          &::after {
-            content: "";
+            content: '';
             margin-left: 20px;
             width: 26px;
             height: 15px;
-            background: url("../img/icons/arrow.png") center / 100% no-repeat;
+            background: url('../img/icons/arrow.png') center / 100% no-repeat;
          }
       }
    }
@@ -590,7 +592,7 @@
       background-color: $mainColor;
       transition: all 0.1s ease 0s;
       &::after {
-         content: "";
+         content: '';
          position: absolute;
          top: 0;
          left: 0;
@@ -734,12 +736,12 @@
 .phone-contacts {
    display: flex;
    &::before {
-      content: "";
+      content: '';
       margin-right: 12px;
       flex: 0 0 21px;
       width: 21px;
       height: 21px;
-      background: url("../img/icons/phone.png") center / 100% no-repeat;
+      background: url('../img/icons/phone.png') center / 100% no-repeat;
       @media (max-width: $md2 + px) {
          filter: brightness(0) invert(2);
       }
@@ -780,12 +782,12 @@
    font-weight: 400;
    color: #000000;
    &::before {
-      content: "";
+      content: '';
       margin-right: 12px;
       flex: 0 0 23px;
       width: 23px;
       height: 18px;
-      background: url("../img/icons/email.png") 0 0 no-repeat;
+      background: url('../img/icons/email.png') 0 0 no-repeat;
       @media (max-width: $md2 + px) {
          filter: brightness(0) invert(2);
       }
@@ -833,15 +835,15 @@
       }
       // .social-block__link_youtube
       &_youtube {
-         background: #fff url("../img/icons/sprite/sprite.svg#youtube") center / 102% no-repeat;
+         background: #fff url('../img/icons/sprite/sprite.svg#youtube') center / 102% no-repeat;
       }
       // .social-block__link_facebook
       &_fb {
-         background: #fff url("../img/icons/sprite/sprite.svg#facebook") center / 102% no-repeat;
+         background: #fff url('../img/icons/sprite/sprite.svg#facebook') center / 102% no-repeat;
       }
       // .social-block__link_viber
       &_viber {
-         background: #fff url("../img/icons/sprite/sprite.svg#viber") center / 102% no-repeat;
+         background: #fff url('../img/icons/sprite/sprite.svg#viber') center / 102% no-repeat;
       }
    }
 }
